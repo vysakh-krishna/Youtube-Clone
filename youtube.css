@@ -18,7 +18,8 @@ body{
     width: 100%;
     margin: 0px;
     padding: 0;
-    /* position: absolute; */
+    top: 0px;
+    position: sticky;
 }
 .header{
     /* position: fixed; */
@@ -44,6 +45,7 @@ body{
 }
 .headSearch{
     flex: 1;
+    margin: auto;
     max-width: 500px;
 }
 .headSearch form{
@@ -51,22 +53,22 @@ body{
     min-width: 80px; */
     border: 1px solid #ddd;
     height: 35px;
-    margin: 0;
+    margin: auto;
     padding: 0;
     display: flex;
 }
 .headSearch button{
-    margin: 0;
+    margin: auto;
     padding: 0;
     height: 100%;
     border:none;
     border-radius: 0;
 }
 .headSearch input{
-    /* max-width: 500px; */
-    /* flex: 1; */
+    max-width: 500px;
+    flex: 1;
     width: 100%;
-
+    margin: auto;
     padding:10px;
     margin: 0;
     border: none;
@@ -74,6 +76,7 @@ body{
 }
 
 .headicons{
+    margin: auto;
     display: flex;
     align-items: center;
     width: 100px;
@@ -81,8 +84,8 @@ body{
 }
 .mainSection{
     display: flex;
-    /* height: calc(100vh -70px); */
-    /* height:100vh; */
+    height: calc(100vh -70px);
+    height:100vh;
     overflow: hidden;
 }
 .leftbar{
@@ -132,9 +135,14 @@ hr{
     flex-direction: row;
     justify-content: space-around;   
     flex-wrap: wrap;
+    /* width:250px; */
+    /* max-width:250px; */
 }
 .video{
     width: 24%;
+    min-width: 200px;
+    /* min-width: */
+    /* width: fit-content; */
     margin-right: 0.5%;
     margin-left: 0.5%;
     margin-bottom: 30px;
@@ -200,4 +208,55 @@ hr{
     padding-right: 15px; */
     margin: 5px;
     
+}
+/* addon */
+@media screen and (max-width: 500px){
+    .leftbar{
+        position:absolute;
+        visibility: hidden;
+    }
+    .video_container{
+        flex-direction: column;
+        /* min-width: 100px; */
+    }
+    .video{
+
+        width:fit-content;
+    }
+    .headleft i {
+        position: absolute;
+        visibility: hidden;
+    }
+    .headleft img {
+        width: 50px ;
+    }
+    .headicons i{
+        margin: auto;
+        width: 28px;
+    }
+    .footers{
+        width: 100%;
+        position: fixed;
+        visibility:visible !important;
+        display: flex;
+        padding: 10px;
+        bottom: 0px;
+        background-color: white;
+        justify-content: space-around;
+    }
+    .footer{
+        z-index: 1;
+        position:fixed;
+        /* background-color: white; */
+        height:30px;
+        padding-top: 10px;
+    }
+    .footer_category{
+        padding: 10px;
+    }
+}
+
+.footer {
+    visibility: hidden;
+    /* position:fixed; */
 }
